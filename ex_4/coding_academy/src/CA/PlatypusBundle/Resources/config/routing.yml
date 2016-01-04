@@ -1,0 +1,10 @@
+ca_platypus_homepage:
+    path:     /
+    defaults: { _controller: CAPlatypusBundle:Default:index }
+
+view:
+    path:     /{name}/show/{id}
+    defaults: { _controller: CAPlatypusBundle:CheckerController:view, id: null }
+    requirements: 
+     id: \d+
+     name: Platypus|Human|Gecko
