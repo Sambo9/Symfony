@@ -1,0 +1,16 @@
+{% extends "::PlatypusLayout.html.twig" %}
+
+{% block title %}CAPlatypusBundle:CheckerController:view{% endblock %}
+
+
+{% block body %}
+{%if name == "Platypus" %}
+	<h1>I salute you, Ô great master.</h1>
+{% elseif name == "Human" or name == "Gecko" %}
+	{% if id matches '/^\\d+$/' %}
+		<h1>Greetings, great {{name}}. {{id}}</h1>
+	{% else %}
+		<h1>Greetings, great {{name}}.</h1>
+	{% endif %}
+{% endif %}
+{% endblock %}

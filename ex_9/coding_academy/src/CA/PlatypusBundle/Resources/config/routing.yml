@@ -1,0 +1,25 @@
+default:
+    path:     /
+    defaults: { _controller: CAPlatypusBundle:CheckerController:index }
+
+index:
+    path:     /index
+    defaults: { _controller: CAPlatypusBundle:CheckerController:index }
+
+
+view:
+    path:     /{name}/show/{id}
+    defaults: { _controller: CAPlatypusBundle:CheckerController:view, id: null }
+    requirements:
+     id: \d+
+     name: Platypus|Human|Gecko
+
+showParams:
+    path:     /checker/showParams/
+    defaults: { _controller: CAPlatypusBundle:CheckerController:showParams}
+    methods: [GET]
+
+login:
+  path:     /login
+  defaults: { _controller: CAPlatypusBundle:CheckerController:login}
+  methods: [POST]
