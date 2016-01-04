@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+
+
+
+{% block title %}CAPlatypusBundle:CheckerController:showParams{% endblock %}
+
+{% block body %}
+
+<table class="table table-bordered">
+	<tr>
+		<th>Name</th>
+		<th>value</th>
+	</tr>
+	
+		{% for key, value in tab %}
+		<tr>
+        	<td>{{ key }}</td>
+        	<td>{{ value}}</td>
+        </tr>
+    	{% endfor %}
+	
+</table>
+{% endblock %}
+
