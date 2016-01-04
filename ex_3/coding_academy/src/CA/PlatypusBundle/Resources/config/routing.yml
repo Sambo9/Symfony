@@ -1,0 +1,7 @@
+ca_platypus_homepage:
+    path:     /
+    defaults: { _controller: CAPlatypusBundle:Default:index }
+
+view:
+    path:     /{name}/show
+    defaults: { _controller: CAPlatypusBundle:CheckerController:view }
